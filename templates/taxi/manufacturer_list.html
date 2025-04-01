@@ -2,7 +2,7 @@
 {% block content %}
   <h2>Manufacturer list</h2><br>
   {% for manufacturer in manufacturer_list %}
-    <h6><a href="{% url "taxi:manufacturers_by_index" pk=manufacturer.id %}">{{ manufacturer.name }}</a></h6>
+    <h6><a href="{% url "taxi:manufacturer-detail" pk=manufacturer.id %}">{{ manufacturer.name }}</a></h6>
   {% empty %}
     <p>No manufacturers exist!</p>
   {% endfor %}
